@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banners-component.component.scss'],
 })
 export class BannersComponentComponent implements OnInit {
+  text: string = 'asdasdas';
+  // imgUrl: string = './asset';
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.text = 'hola comoestas';
+  }
 }

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/open-banking-sitio-public1o",
+    "public": "dist/open-banking-sitio-publico",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
