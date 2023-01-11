@@ -5,9 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavHeaderComponentComponent } from './components/nav-header-component/nav-header-component.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import packageInfo from '../../package.json';
+
+import {
+  AngularFireAnalyticsModule,
+  ScreenTrackingService,
+  UserTrackingService,
+  CONFIG,
+  DEBUG_MODE,
+  APP_NAME,
+  APP_VERSION,
+} from '@angular/fire/compat/analytics';
 
 @NgModule({
   declarations: [
@@ -15,9 +26,18 @@ import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService
     HomeLayoutComponent,
     NavHeaderComponentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAnalytics(() => getAnalytics())],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+  ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,
+    UserTrackingService,
+    { provide: DEBUG_MODE, useValue: environment.debugFirebase },
+    { provide: APP_NAME, useValue: environment.firebase.projectId },
+    { provide: APP_VERSION, useValue: packageInfo.version },
   ],
   bootstrap: [AppComponent],
 })

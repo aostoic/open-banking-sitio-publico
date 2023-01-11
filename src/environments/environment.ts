@@ -9,4 +9,5 @@ export const environment = {
     measurementId: 'G-NQQNBPJH6V',
   },
   production: false,
+  debugFirebase: true,
 };
