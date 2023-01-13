@@ -3,11 +3,12 @@
     <p class="text-white text-xs mr-5 flex justify-end content-center p-0.5"><span>Accesibilidad:</span></p>
     <p class="text-white text-xs mr-1 flex justify-end content-center p-0.5 px-1 border rounded-l-full"><span>A</span></p>
     <p class="text-white text-sm mr-3 flex justify-end content-center p-1 py-0 border rounded-r-full"><span>A</span></p>
-    <p class="text-white text-xs flex justify-end content-center border rounded-full p-2.5"></p>
+    <p class="text-white text-xs flex justify-end content-center border rounded-l-full w-3"></p>
+    <p class="text-white text-xs flex justify-end content-center border rounded-r-full w-3 bg-white"></p>
   </div>
 </div>
 <nav
-  class="bg-white shadow-md px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:shadow-none md:border-0">
+  class="bg-white shadow-md px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:border-0">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a routerLink="/inicio" class="flex items-center text-black">
       <img src="../../../assets/Logo_BancoEstado.png" class="h-6 mr-1 sm:h-9" alt="Flowbite Logo" />
@@ -28,25 +29,25 @@
         class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
           <a routerLink="/inicio" [ngClass]="{'bg-amber-500 text-white':router.url.includes('/inicio')}"
-            class="text-black hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            class="hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             aria-current="page">Inicio</a>
         </li>
         <li>
           <a routerLink="/apis" [ngClass]="{'bg-amber-500 text-white':router.url.includes('/apis')}"
-            class="text-black hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nuestras
+            class="hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nuestras
             APIS</a>
         </li>
         <li>
           <a routerLink="/soporte" [ngClass]="{'bg-amber-500 text-white':router.url.includes('/soporte')}"
-            class="text-black hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Soporte</a>
+            class="hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Soporte</a>
         </li>
         <li>
           <a routerLink="/registrarse" [ngClass]="{'bg-amber-500 text-white':router.url.includes('/registrarse')}"
-            class="text-black hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Regístrate</a>
+            class="hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Regístrate</a>
         </li>
         <li>
           <a routerLink="/login" [ngClass]="{'bg-amber-500 text-white':router.url.includes('/login')}"
-            class="text-black hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Iniciar
+            class="hover:bg-amber-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Iniciar
             Sesión</a>
         </li>
       </ul>
