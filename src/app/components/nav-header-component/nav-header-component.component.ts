@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav-header-component',
   templateUrl: './nav-header-component.component.html',
@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavHeaderComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
+  router = this._router;
+  
   ngOnInit() {
   }
 
