@@ -19,12 +19,14 @@ import {
   APP_NAME,
   APP_VERSION,
 } from '@angular/fire/compat/analytics';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeLayoutComponent,
     NavHeaderComponentComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
