@@ -1,0 +1,31 @@
+.swiper-button-prev {
+  cursor: pointer;
+  color: rgb(245 158 11) !important;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+     content: 'none'; 
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'none'; 
+}
+
+.swiper-slide {
+    text-align: left !important;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 10px;
+    margin-block-start: inherit;
+}
+
+.swiper-button-prev, .swiper-rtl {
+    left: 10px !important;
+}
+
+.container-our-apis {
+    border: 1px solid;
+    align-items: center !important;
+}
