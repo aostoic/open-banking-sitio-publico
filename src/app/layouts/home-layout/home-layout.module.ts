@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BannersComponentComponent } from 'src/app/components/banners-component/banners-component.component';
@@ -15,7 +16,7 @@ import { SupportPageComponent } from 'src/app/pages/support-page/support-page.co
 
 import { HomeLayoutRoutes } from './home-layout.routing';
 @NgModule({
-  imports: [RouterModule.forChild(HomeLayoutRoutes)],
+  imports: [RouterModule.forChild(HomeLayoutRoutes), CommonModule],
 
   declarations: [
     HomePageComponent,
@@ -33,4 +34,4 @@ import { HomeLayoutRoutes } from './home-layout.routing';
   bootstrap: [HomePageComponent],
   exports: [],
 })
-export class HomeLayoutModule {}
+export class HomeLayoutModule { }
